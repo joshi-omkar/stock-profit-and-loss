@@ -3,8 +3,7 @@ import "./styles.css";
 const Footer = () => {
   return (
     <footer>
-      <h2>about</h2>
-      <p>check your birthdate is LUCKY or NOT</p>
+      <h2 className="footer-h2">Connect to..</h2>
 
       <div class="footer">
         <ul class="social-links list-non-bullet">

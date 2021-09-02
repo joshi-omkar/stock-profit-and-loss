@@ -121,3 +121,10 @@ footer h2 {
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
   }
 }
+
+.footer-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 45px;
+}
