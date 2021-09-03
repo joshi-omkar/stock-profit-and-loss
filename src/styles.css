@@ -3,8 +3,10 @@
   text-align: center;
 }
 
-body {
-  overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
@@ -71,10 +73,10 @@ h3 {
 }
 
 footer {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
   background-color: #f2c94c;
   text-align: center;
   padding: 2px;

@@ -39,47 +39,56 @@ export default function App() {
   return (
     <div className="App">
       <nav>Stock Profile & Loss Calculator</nav>
-      <div classNmae="container">
-        <h3>Initial Price</h3>
-        <input
-          type="text"
-          className="input"
-          placeholder="Enter Initial Price Here"
-          onChange={(e) => {
-            var intial = Number(e.target.value);
-            setInitial(intial);
-          }}
-        />
-        <br />
-        <h3>Quantity of Stocks</h3>
-        <input
-          type="text"
-          className="input"
-          placeholder="Enter the Number of Stocks bought"
-          onChange={(e) => {
-            var quantity = Number(e.target.value);
-            setQuantity(quantity);
-          }}
-        />
-        <br />
-        <h3>Current Price</h3>
-        <input
-          type="text"
-          className="input"
-          placeholder="Enter the Current Price of the stocks"
-          onChange={(e) => {
-            var current = Number(e.target.value);
-            setCurrent(current);
-          }}
-        />
+      <form onSubmit={handleOnCLick}>
+        <div classNmae="container">
+          <h3>Initial Price</h3>
+          <input
+            type="Number"
+            className="input"
+            min="1"
+            step="1"
+            placeholder="Enter Initial Price Here"
+            onChange={(e) => {
+              var intial = Number(e.target.value);
+              setInitial(intial);
+            }}
+          />
+          <br />
+          <h3>Quantity of Stocks</h3>
+          <input
+            type="Number"
+            className="input"
+            required
+            min="1"
+            step="1"
+            placeholder="Enter the Number of Stocks bought"
+            onChange={(e) => {
+              var quantity = Number(e.target.value);
+              setQuantity(quantity);
+            }}
+          />
+          <br />
+          <h3>Current Price</h3>
+          <input
+            type="Number"
+            required
+            className="input"
+            min="1"
+            step="1"
+            placeholder="Enter the Current Price of the stocks"
+            onChange={(e) => {
+              var current = Number(e.target.value);
+              setCurrent(current);
+            }}
+          />
 
-        <br />
+          <br />
 
-        <button type="submit" onClick={handleOnCLick} className="btn">
-          Tell Me!!
-        </button>
-      </div>
-
+          <button type="submit" className="btn">
+            Tell Me!!
+          </button>
+        </div>
+      </form>
       <div>{output}</div>
 
       <Footer />
